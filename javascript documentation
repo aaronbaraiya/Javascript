@@ -187,3 +187,67 @@ const isNotStudent = studentOne.filter(function(isNotStudying) {
 console.log(student);
 console.log(isNotStudent);
 
+#6:
+
+const person = [
+    {
+        id: 1,
+        name: "Aaron",
+        isStudent: true
+    },
+
+    {
+        id: 2,
+        name: "John",
+        isStudent: true
+    },
+
+    {
+        id: 3,
+        name: "Victor",
+        isStudent: false
+    },
+
+    {
+        id: 4,
+        name: "William",
+        isStudent: false
+    }
+];
+
+const students = [
+    {
+        name: "Aaron",
+        gender: "male"
+    }
+];
+
+students.forEach(function(information) {
+    console.log(students);
+});
+
+
+const personTwo = person.filter(function(studying) {
+    return studying.isStudent == true;
+}).map(function(studying) {
+    return studying.name;
+});
+
+const personThree = person.filter(function(isNotStudying) {
+    return isNotStudying.isStudent == false;
+}).map(function(isNotStudying) {
+    return isNotStudying.name;
+});
+
+function equal() {
+    if(personTwo.length == personThree.length) {
+        console.log("THEY ARE BOTH EQUAL");
+    }
+    else {
+        console.log("THEY ARE NOT BOTH EQUAL");
+    }
+}
+
+console.log(personTwo);
+console.log(personThree);
+console.log(equal());
