@@ -1,0 +1,189 @@
+// javascript
+ 
+function text(words) {
+   return (words.substring(0,5));
+}
+ 
+function textTwo(wordsTwo) {
+   return (wordsTwo.split(" ",1));
+}
+ 
+console.log(text("Aaron"));
+console.log(textTwo("Aaron Joshua Baraiya"));                                                                                                                                         
+
+
+
+ 
+#2
+const tenthGraders = [
+ {
+   id: 324154,
+   grade: 11,
+   gender: "male"
+ },
+ 
+ {
+   id: 21211,
+   grade: 10,
+   gender: "other"
+ }
+];
+ 
+function receiveID() {
+ const idenNum = tenthGraders[0].id;
+ 
+ return idenNum;
+}
+ 
+function ID() {
+ const secIdenNum = tenthGraders[1].id;
+ 
+ return secIdenNum;
+}
+ 
+ 
+tenthGraders.forEach(function(students) {
+ console.log(receiveID());
+ console.log(ID());
+});
+
+
+#3
+
+const person = [
+ {
+   id: 1,
+   name: "Aaron",
+   gender: "male"
+ },
+ 
+ {
+   id: 2,
+   name: "John",
+   gender: "male"
+ },
+ 
+ {
+   id: 3,
+   name: "Bucky",
+   gender: "male"
+ }
+];
+ 
+ 
+//returns ID
+const personDetails = person.map(function(details) {
+   return details.id;
+});
+ 
+const personDetailsTwo = person.map(function(detailsTwo) {
+   return detailsTwo.name;
+});
+ 
+console.log(personDetails);
+console.log(personDetailsTwo[0]);
+ 
+if((personDetailsTwo[0]) == "Aaron") {
+ console.log("BOB WAZ HERE!");
+}
+
+#4:
+
+const students = [
+ {
+   id: 1,
+   name: "Aaron"
+ },
+ 
+ {
+   id: 2,
+   name: "John"
+ },
+ 
+ {
+   id: 3,
+   name: "Victor"
+ },
+ 
+ {
+   id: 4,
+   name: "Usher"
+ }
+];
+ 
+const studentOne = [
+ {
+   id: 1,
+   name: "BOB"
+ }
+];
+ 
+function nameAndId() {
+ console.log(studentOne.id);
+ console.log(studentOne.name);
+}
+ 
+studentOne.forEach(function(firstStudent) {
+ console.log(nameAndId);
+});
+ 
+const studentInfo = students.map(function(info) {
+ return info.id;
+});
+ 
+const studentNames = students.map(function(names) {
+ return names.name;
+});
+ 
+ 
+console.log(studentInfo);
+console.log(studentOne);
+console.log(studentNames[0]);
+console.log(findName());
+ 
+function findName() {
+ if((studentNames[0]) == "Aaron") {
+   console.log("Aaron is here");
+ }
+ else {
+   console.log("ERROR 404 PAGE NOT FOUND");
+ }
+}
+
+#5:
+
+const studentOne = [
+    {
+        id: 1,
+        name: "Aaron",
+        isStudent:  true
+    },
+ 
+    {
+        id: 2,
+        name: "John",
+        isStudent: false
+    },
+ 
+    {
+        id: 3,
+        name: "Victor",
+        isStudent: true
+    }
+];
+ 
+const student = studentOne.filter(function(isStudying) {
+    return isStudying.isStudent == true;
+}).map(function(isStudying) {
+    return isStudying.name;
+});
+	
+const isNotStudent = studentOne.filter(function(isNotStudying) {
+    return isNotStudying.isStudent == false;
+}).map(function(isNotStudying) {
+    return isNotStudying.name;
+}); 
+ 
+console.log(student);
+console.log(isNotStudent);
+
