@@ -251,3 +251,38 @@ function equal() {
 console.log(personTwo);
 console.log(personThree);
 console.log(equal());
+
+
+#7:
+
+#1:
+const schoolInformation = [
+    {
+        school: 1,
+        students: 340,
+        teachers: 88
+    },
+
+    {
+        school: 2,
+        students: 444,
+        teachers: 91
+    },
+
+    {
+        school: 3,
+        students: 248,
+        teachers: 57
+    },
+
+    {
+        school: 4,
+        students: 327,
+        teachers: 77
+    }
+];
+
+schoolInformation.forEach(function(numOfStudents) {
+    console.log("Number of students: ");
+    console.log(numOfStudents.students);
+});
