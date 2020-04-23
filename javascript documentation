@@ -254,8 +254,6 @@ console.log(equal());
 
 
 #7:
-
-#1:
 const schoolInformation = [
     {
         school: 1,
@@ -286,3 +284,31 @@ schoolInformation.forEach(function(numOfStudents) {
     console.log("Number of students: ");
     console.log(numOfStudents.students);
 });
+
+#8:
+
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+
+    this.getBirthYear = function() {
+        return this.dob.getFullYear();
+    }
+}
+
+const personOne = new Person("Aaron", "Baraiya", "4/14/2003");
+
+
+function age() {
+    const currentYear = 2020;
+
+    const currentAge = (currentYear - personOne.dob.getFullYear()); //used to find age from current year
+
+    console.log("Age: ");
+    console.log(currentAge);
+}
+
+console.log("BirthYear is: ");
+console.log(personOne.getBirthYear());
+console.log(age());
