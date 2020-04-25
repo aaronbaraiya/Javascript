@@ -355,3 +355,68 @@ console.log(personOneDetails.getFullYear());
 console.log(airCraft.getAirCraftName());
 console.log(airCraft.getAirCraftCapacity());
 console.log(airCraft.getTicketsBooked());
+
+#10:
+const basicDetails = [
+    {
+        numOfPeople:  300,
+        categoryOfPeople: 14,
+    },
+
+    {
+        numOfPeople: 244,
+        categoryOfPeople: 10
+    }
+];
+
+function personDetails(firstName, lastName, dob) {
+    this.firstName =  firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+
+    this.getFullYear = function() {
+        return `${dob}`;
+    }
+
+    this.getFullName =  function() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+function airplaneDetails(aircraftName, aircraftCapacity, aircraftTicketsBooked) {
+    this.aircraftName = aircraftName;
+    this.aircraftCapacity = aircraftCapacity;
+    this.aircraftTicketsBooked = aircraftTicketsBooked;
+
+    this.getAirCraftName = function() {
+        return `${this.aircraftName}`;
+    }
+
+    this.getAirCraftCapacity = function() {
+        return `${this.aircraftCapacity}`;
+    }
+
+    this.getTicketsBooked = function() {
+        return `${this.aircraftTicketsBooked}`;
+    }
+}
+
+function numOfPeopleCalculator() {
+    if((basicDetails[0].numOfPeople) > 200) {
+        console.log("NUM  > 200");
+    }
+    else {
+        console.log("ELSE");
+    } 
+}
+
+const personOneDetails = new personDetails("Aaron", "Baraiya", "4/14/2003");
+const airCraft = new airplaneDetails("Boeing", 344, 320);
+
+console.log(personOneDetails.getFullName());
+console.log(personOneDetails.getFullYear());
+console.log(airCraft.getAirCraftName());
+console.log(airCraft.getAirCraftCapacity());
+console.log(airCraft.getTicketsBooked());
+console.log(basicDetails[0].numOfPeople);
+console.log(numOfPeopleCalculator());
