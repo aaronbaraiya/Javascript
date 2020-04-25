@@ -420,3 +420,58 @@ console.log(airCraft.getAirCraftCapacity());
 console.log(airCraft.getTicketsBooked());
 console.log(basicDetails[0].numOfPeople);
 console.log(numOfPeopleCalculator());
+
+
+#11:
+
+const information = [
+    {
+        id: 324154,
+        name: "Aaron",
+        gender: "male"
+    },
+
+    {
+        id: 215351,
+        name: "Joshua",
+        gender: "male"
+    }, 
+
+    {
+        id: 684952,
+        name: "Victor",
+        gender: "male"
+    }
+];
+
+console.log("Details: ");
+
+information.forEach(function(ID) {
+    console.log("ID: ");
+    console.log(ID.id);
+});
+
+information.forEach(function(name) {
+    console.log("Name: ");
+    console.log(name.name);
+});
+
+information.forEach(function(gender) {
+    console.log("Gender: ");
+    console.log(gender.gender);
+});
+
+const getName = information.map(function(studentName) {
+    console.log("Student names: ");
+    return studentName.name;
+});
+
+function determineSomething() {
+    if((getName[0] == "Aaron")) {
+        console.log("Hello " + `${getName[0]}`);
+    }
+}
+
+
+console.log(getName);
+console.log(determineSomething());
