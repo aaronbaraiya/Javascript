@@ -369,6 +369,7 @@ const basicDetails = [
     }
 ];
 
+
 function personDetails(firstName, lastName, dob) {
     this.firstName =  firstName;
     this.lastName = lastName;
@@ -475,3 +476,22 @@ function determineSomething() {
 
 console.log(getName);
 console.log(determineSomething());
+
+#12: INCOMPELETED PROBLEM STILL MUST BE FIXED;
+
+function animals(num1, num2, num3) {
+
+    const chickens = 2;
+    const cows = 4;
+    const pigs = 4;
+
+    const chickenLegs = num1 * chickens;
+    const cowLegs = num2 * cows;
+    const pigLegs = num3 * pigs;
+
+    console.log(chickenLegs);
+    console.log(cowLegs);
+    console.log(pigLegs);
+}
+
+console.log(animals(2, 3, 5));
