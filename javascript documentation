@@ -495,3 +495,43 @@ function animals(num1, num2, num3) {
 }
 
 console.log(animals(2, 3, 5));
+
+#13:
+
+
+class Person {
+    constructor(firstName, lastName, dob, gender) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);
+        this.gender = gender;
+    }
+
+    getFullName() {
+        return this.firstName + this.lastName;
+    }
+
+    getFullYear() {
+        return this.dob;
+    }
+
+    getGender() {
+        return this.gender;
+    }
+}
+
+function checkGender() {
+    if(personOne.getGender() == "Male") {
+        console.log("Good to know ur straight")
+    }
+    else {
+        console.log("YOUR GAIIII!!!");
+    }
+}
+
+const personOne = new Person("Aaron", " Baraiya", "4/14/2003", "Male");
+
+console.log(personOne.getFullName());
+console.log(personOne.getFullYear());
+console.log(personOne.getGender());
+console.log(checkGender());
