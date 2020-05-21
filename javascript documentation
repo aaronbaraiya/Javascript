@@ -535,3 +535,64 @@ console.log(personOne.getFullName());
 console.log(personOne.getFullYear());
 console.log(personOne.getGender());
 console.log(checkGender());
+
+
+//FOR FUN BASED ON UPPER CODE:
+"use strict";
+
+const personDetails = [
+    {
+        name: "Aaron",
+        gender: "male",
+        age: 16
+    },
+
+    {
+        name : "Victor",
+        gender: "male",
+        age: 40
+    },
+
+    {
+        name: "John",
+        gender: "male",
+        age: 25
+    }
+]; 
+
+function getName() {
+    const personName = personDetails[0].name;
+
+    return personName;
+}
+
+function getNameTwo() {
+    const personName = personDetails[1].name;
+
+    return personName;
+}
+
+function getNameThree() {
+    const personName = personDetails[2].name;
+
+    return personName;
+} 
+
+const personName = personDetails.map(function(perName) {
+    return perName.name;
+});
+
+const personID = personDetails.map(function(perAge) {
+    return perAge.age;
+});
+
+
+
+if((personName[1]) == "Victor") {
+    document.write(`Hello ${personName[1]}`);
+}
+else {
+    document.write("Hello");
+}
+
+console.log(personID);
