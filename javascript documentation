@@ -596,3 +596,64 @@ else {
 }
 
 console.log(personID);
+
+
+
+/*NEW ONE*/:
+
+
+
+// javascript
+
+const data = [
+    {
+        name: "Aaron",
+        gender: "male",
+        id: 324154
+    },
+    
+    {
+        name: "John",
+        gender: "male",
+        id: 345901
+    },
+    
+    {
+        name: "BOB",
+        gender: "male",
+        id: 768594
+    }
+];
+
+const getName = data.map(function(personName) {
+    return personName.name;
+});
+
+function respondToName() {
+    if(getName[0] == "Aaron") {
+        console.log(`Hello ${getName[0]}`);
+    }
+     if(getName[2] == "BOB") {
+        console.log(`YOOOO ${getName[2]}`);
+    }
+}
+
+console.log(getName);
+respondToName();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
