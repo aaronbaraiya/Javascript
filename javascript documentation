@@ -642,18 +642,146 @@ console.log(getName);
 respondToName();
 
 
+//NEW:
+// javascript
+
+const data = [
+    {
+        gender: "male",
+        grade: 11,
+        age: 16
+    },
+    
+    {
+        gender: "male",
+        grade: 9,
+        age: 14
+    },
+    
+    {
+        gender: "male",
+        grade: 10,
+        age: 15
+    },
+    
+    {
+        gender: "other",
+        grade: 12,
+        age: 18
+    }
+];
+
+otherPersons = "Not male: ";
+
+//forEach method
+/*
+data.forEach(function(person) {
+    console.log(`Gender: ${person.gender}`);
+});*/
+
+//number of males and other
+const numOfMen = data.filter(function(male) {  
+    
+    malePersons = "Male persons: ";
+    console.log(malePersons);
+    
+    if(male.gender == "male") {
+        return true;
+    }
+    else {
+        return false;
+    }
+});
+
+//ifNotMale
+const numOther = data.filter(function(notMale) {
+       
+    if(notMale.gender != "male") {
+        return true;
+    }
+    else {
+        return false;
+    }
+});
+
+console.log(numOfMen);
+console.log(otherPersons);
+console.log(numOther);
+
+//NEW:
+// javascript
+
+const companies = [
+  {
+    name: "Company One", category: "Finance", start: 1981, end: 2003
+  },
+  {name: "Company Two", category: "Retail", start: 1992, end: 2008},
+  {name: "Company Three", category: "Auto", start: 1999, end: 2007},
+  {name: "Company Four", category: "Retail", start: 1989, end: 2010},
+  {name: "Company Five", category: "Technology", start: 2009, end: 2014},
+  {name: "Company Six", category: "Finance", start: 1987, end: 2010},
+  {name: "Company Seven", category: "Auto", start: 1986, end: 1996},
+  {name: "Company Eight", category: "Technology", start: 2011, end: 2016},
+  {name: "Company Nine", category: "Retail", start: 1981, end: 1989}
+];
+
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+/*
+//for loop
+for(let i = 0; i < companies.length; i++) {
+    console.log(companies[i]);
+}
+
+//forEach
+//prints out whatever is in the console
+companies.forEach(function(company) {
+    console.log(company.name);
+});
+
+//filter
+const ageDrinkage = ages.filter(function(age) {
+    if(age >= 21) {
+        return true;
+    }
+});
+
+console.log(ageDrinkage);
+
+//filter retail companies
+const retailCompany = companies.filter(function(companyRetail) {
+    if(companyRetail.category == "Retail") {
+        return true;
+    }
+});
+
+console.log(retailCompany);
 
 
+//filter companies from the 80s
+const companyEight = companies.filter(function (check) {
+    if(check.start > 1980 && check.start < 1990) {
+        return true;
+    }
+    else {
+       return false;
+    }
+});
 
+console.log(companyEight);
 
+//companies that lasted for more than 10 years
+const moreThanTen = companies.filter(function(tenYears) {
+    let companyLength = (tenYears.end) - (tenYears.start);
+    
+    if(companyLength >= 10) {
+        return true;
+    }
+    else {
+        return false;
+    }
+});
 
+console.log(moreThanTen);*/
 
-
-
-
-
-
-
-
-
-
+//map
