@@ -784,4 +784,52 @@ const moreThanTen = companies.filter(function(tenYears) {
 
 console.log(moreThanTen);*/
 
-//map
+
+
+
+
+
+//map MAP
+//make company names into a array
+const companyNames = companies.map(function(names) {
+    return names.name;
+});
+
+//company names and start to end year
+const companyDetails = companies.map(function(details) {
+    return `${details.name} [${details.start} - ${details.end}]`;
+});
+
+//company cateogry
+const compCat = companies.map(function(compCat) {
+    return `Company Category: ${compCat.category}`;
+});
+
+
+
+//sort
+const sortCompany = companies.sort(function(c1, c2) {
+    if(c1.start > c2.start) {
+        return 1;
+    }
+    else {
+      return -1;
+    }
+});
+
+//sort age
+const sortAges = ages.sort(function(a, b) {
+    if(a > b) {
+      return 1;
+    }
+    else {
+      return -1;
+    }
+});
+
+
+console.log(companyNames);
+console.log(companyDetails);
+console.log(compCat);
+console.log(sortCompany);
+console.log(sortAges);
