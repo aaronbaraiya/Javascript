@@ -833,3 +833,100 @@ console.log(companyDetails);
 console.log(compCat);
 console.log(sortCompany);
 console.log(sortAges);
+
+
+//NEW:
+"use strict";
+
+const data = [
+  {
+    region: "north",
+    item: "pencil",
+    units: 95,
+    total: 189.05
+  },
+
+  {
+    region: "east",
+    item: "notebook",
+    units: 80,
+    total: 999.05
+  },
+
+  {
+    region: "west",
+    item: "Desk",
+    units: 2,
+    total: 250.00
+  },
+
+  {
+    region: "south",
+    item: "pen",
+    units: 46,
+    total: 86.43
+  },
+
+  {
+    region: "central",
+    item: "binder",
+    units: 28,
+    total: 413.54
+  }
+];
+
+//forEach
+data.forEach(function(area) {
+    console.log(area.region);
+});
+
+//filter: based on number of units
+const unitsNum = data.filter(function(amount) {
+    if(amount.units > 45) {
+      return true;
+    }
+    else {
+      return false;
+    }
+});
+
+//filter out 
+const largeTotal = data.filter(function(cost) {
+    if(cost.total > 230.00) {
+      return true;
+    }
+    else {
+      return false;
+    }
+});
+
+//map
+const getItem = data.map(function(objects) {
+    return objects.item;
+});
+
+//sort by item length
+const itemLength = data.sort(function(a, b) {
+      if(a.length > b.length) {
+          return 1;
+      }
+      else {
+        return -1;
+      }
+});
+
+console.log(" ");
+console.log("Units larger than 45: ");
+console.log(unitsNum);
+
+console.log(" ");
+console.log("Large total purchase amounts: ");
+console.log(largeTotal);
+
+console.log(" ");
+console.log("All items: ");
+console.log(getItem);
+
+console.log(" ");
+console.log("Items sorted by name length: ");
+console.log(itemLength);
