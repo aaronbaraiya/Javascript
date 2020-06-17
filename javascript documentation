@@ -930,3 +930,55 @@ console.log(getItem);
 console.log(" ");
 console.log("Items sorted by name length: ");
 console.log(itemLength);
+
+
+//NEW
+
+function doHomework(work, callback) {
+    console.log(`Doing ${work}`);
+    callback();
+}
+
+doHomework("math", function() {
+    console.log(`Done work`);
+});
+
+
+//another example
+function example(name, callback) {
+    console.log(callback(name));
+}
+
+let callback = function(name) {
+    return `Hello ${name}`;
+};
+
+//calling the function
+example("Aaron", function(name) {
+    return `Hello ${name}`;
+});
+
+
+//getNum: FUNCTION NEEDED AND TRYING HARD TO GET IT
+
+function getNum(remaining, callback) {
+    space = prompt("Enter space available: ");
+    spots = prompt("Enter spots: ");
+
+    remaining = (space - spots);
+
+    if(spots > space) {
+      console.log("ERROR TOO MANY PEOPLE");
+      console.log("TOO MANY BY: ")
+    }
+
+    console.log(`Remaining: ${remaining}`);
+}
+
+let getCallBack = function(remaining) {
+    return `Num: ${remaining}`;
+};
+
+getNum("Number", function(remaining) {
+    return `Num: ${remaining}`;
+});
