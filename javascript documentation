@@ -982,3 +982,37 @@ let getCallBack = function(remaining) {
 getNum("Number", function(remaining) {
     return `Num: ${remaining}`;
 });
+
+//NEW:
+
+WORKS CORRECTLY:
+HTML:
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <script type="module" src="main.js"></script>
+    </body>
+</html>
+
+MAIN JS:
+"use strict";
+
+import * as Exports from "./extra.js";
+
+Exports.hello();
+Exports.getAge();
+
+EXTRA JS:
+let name = prompt("Enter name: ");
+let age = prompt("Enter age: ");
+
+export function hello() {
+    console.log(`Hello ${name}`);
+}
+
+export function getAge() {
+    console.log(`Age: ${age}`);
+} 
