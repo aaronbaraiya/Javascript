@@ -1122,3 +1122,59 @@ console.log(add(...array));
 console.log(subtract(...array));
 //using template literal with a argument
 console.log(`Miles to Km: ${milesToKm(20)}`);
+
+
+
+//Enhanced Object Properties
+
+const calculator = (name, words) => {
+	return {
+		name: name,
+
+		//:function are not really needed
+		add(a, b) {
+			return a + b;
+		},
+
+		subtract: function(n1, n2) {
+			return n1 - n2;
+		}
+	}
+};
+
+const calName = calculator("casio");
+const calNameTwo = calculator("name");
+
+console.log(calName);
+console.log(calName.add(2, 2));
+console.log(calName.subtract(4, 2));
+
+
+
+//lexical and this
+const person = {
+	name: "John",
+	cars: ["toyota", "honda"],
+
+	toString: function() {
+
+		this.cars.forEach(car => {
+			console.log(`${this.name} has ${car}`);
+		});
+	}
+};
+
+const obj = {
+	name: "name",
+	numbers: ["one", "two", "three"],
+
+	toString: function() {
+		
+		this.numbers.forEach(print => {
+			console.log(`Name: ${this.name} objects: ${print}`);
+		});
+	}
+};
+
+person.toString();
+obj.toString();
