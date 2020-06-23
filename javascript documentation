@@ -1016,3 +1016,109 @@ export function hello() {
 export function getAge() {
     console.log(`Age: ${age}`);
 } 
+
+
+//spread operators array
+
+const one = ["one", "two", "three"];
+const two = ["aaron", "john", "BOB"];
+
+const conCat = [...one, ...two];
+
+//prints everything in conCat out
+conCat.forEach(function(text) {
+    console.log(text);
+});
+
+const addNumbers = function(a, b, c) {
+    return a + b + c;
+};
+
+const subtract = function(a, b, c) {
+    return a - b - c;
+};
+
+const numbers = [1, 2, 3];
+
+const addition = addNumbers(...numbers);
+const difference = subtract(...numbers);
+
+console.log(addition);
+console.log(difference);
+
+
+
+
+//objects and spreads operators
+
+const address = {
+    city: "Toronto",
+    country: "Canada",
+    location: "North"
+};
+
+const name = {
+    first: "Aaron",
+    last: "Baraiya"
+};
+
+//combining two objects
+
+const person = {...address, ...name};
+
+console.log(person);
+
+
+//arrow functions
+/*to do this replace keyword function into =>
+and place => in front of { symbol
+*/
+
+/*
+arrow functions are good for small operations
+though for big ones keep function in there
+*/
+
+/*
+for long body function is better
+for short body => is better
+best for map, reduce, and filter
+*/
+
+
+/*
+arrow functions are good for return statements with only one line of code
+*/
+
+/*
+if your body of your function is long replace with () and => and keep {}
+else if only one return statement: modify to only one line of code only such as add function
+*/
+
+//LONG BODY:
+const hello = () => {
+    let es6 = "es6";
+
+    return `Hello ${es6}`;
+};
+
+
+const hello = () => "Hello";
+
+const array = [1, 2, 3];
+
+array.forEach((numbers) => {
+    console.log(numbers);
+});
+
+const add = (a, b, c) =>  a + b + c;
+
+const subtract = (a, b, c) =>  a - b - c;
+
+const milesToKm = (miles) => miles * 1.60934;
+
+console.log(hello());
+console.log(add(...array));
+console.log(subtract(...array));
+//using template literal with a argument
+console.log(`Miles to Km: ${milesToKm(20)}`);
