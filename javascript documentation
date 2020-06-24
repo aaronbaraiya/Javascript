@@ -1181,6 +1181,73 @@ obj.toString();
 
 
 
+//array destructing
+const names = ["anna", "mariam", "joe", "mark", "matt"];
+
+const [first, second,, ...restOfNames] = names;
+
+console.log(`${first}  ${second} ${restOfNames}`);
+
+
+
+
+
+
+
+
+
+
+//object  destructing
+const getUser = () => {
+    return {
+        name: "John",
+        surname: "Doe",
+        gender: "male",
+        age: 29,
+        address: {
+            country: "USA",
+            city: "cali",
+            postCode: "CA",
+            fullAddress: {
+                doorNumber: 22,
+                street: "LA st"
+            }
+        },
+    }
+};
+
+const user = getUser();
+
+const {  name: n, age: a, address: { country: theCountry } } = user;
+const { address:  {fullAddress:  {doorNumber: number} } } = user;
+
+
+console.log(n);
+console.log(`Age: ${a}`);
+console.log(theCountry);
+console.log(number);
+
+
+
+
+
+
+
+//function default parametres
+const calculatePay  = (salary, bonus =  {
+    teamBonus: 0,
+    extraBonus: 0,
+}) => {
+    return salary + bonus.teamBonus + bonus.extraBonus;
+};
+
+console.log(calculatePay(20000, { teamBonus: 1000,  extraBonus: 2000 }));
+
+
+
+
+
+
 
 //classess, methods, and constructor
 class Animal {
