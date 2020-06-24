@@ -1178,3 +1178,43 @@ const obj = {
 
 person.toString();
 obj.toString();
+
+
+
+
+//classess, methods, and constructor
+class Animal {
+    constructor(name, age) {
+        console.log(`Name: ${name}`);
+        this.name = name;
+        this.age = age;
+    }
+
+    objAge() {
+        console.log(`Age: ${this.age}`);
+    }
+
+    eat() {
+        console.log(`${this.name} is eating`);
+    }
+
+    sleep() {
+        console.log(`${this.name} is sleeping`);
+    }
+
+    waking() {
+        console.log(`${this.name} is waking`);
+    }
+
+    testing(parametre) {
+        console.log(`Parametre: ${parametre}`);
+    }
+
+}
+
+const obj = new Animal("John", 10);
+obj.objAge();
+obj.eat();
+obj.sleep();
+obj.waking();
+obj.testing("Parametre");
