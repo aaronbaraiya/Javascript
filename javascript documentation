@@ -1323,3 +1323,56 @@ console.log(person.greetUser());
 person.editName("BOB -700");
 console.log(person.greetUser());
 console.log(person.middleName());
+
+
+
+
+
+
+
+
+
+
+
+
+//inheritance
+class User {
+    constructor(one, two, three) {
+        this.one = one;
+        this.two = two;
+        this.three = three;
+    }
+
+    firstMethod() {
+        console.log(`One: ${this.one}`);
+    }
+
+    secondMethod() {
+        console.log(`THIS IS THE Sec: ${this.two}`);
+    }
+}
+
+class Sec extends User {
+    constructor(one, two, three, four) {
+        super(one, two, three);
+        this.number = four;
+    }
+
+    getMeth() {
+        console.log(`One ${this.one}`);
+        console.log(`Four: ${this.number}`);
+    }
+
+    //to call method from other class
+    getOtherMeth() {
+        super.secondMethod();
+    }
+} 
+
+const first = new User("One", "two", "three");
+first.firstMethod();
+
+const second = new Sec("first", "second", "third", "fourth");
+second.getMeth();
+second.firstMethod();
+second.getOtherMeth();
