@@ -1285,3 +1285,41 @@ obj.eat();
 obj.sleep();
 obj.waking();
 obj.testing("Parametre");
+
+
+
+
+
+//ANOTHER ONE: CLASSES:
+class User {
+    constructor(name, middle, lastName) {
+        this.name = name;
+        this.middle = middle;
+        this.lastName = lastName;
+    }
+
+    greetUser() {
+        return `Hello ${this.name}`;
+    }
+
+    editName(newName) {
+        const edit = newName.split(" ");
+        this.name = edit[0];
+        this.lastName = edit[1];
+    }
+
+    /*challenge by video classess and objects by hitest
+      challenge successfull
+    */
+    middleName() {
+        return `Name: ${this.name} ${this.middle} ${this.lastName}`
+    }
+}
+
+const person = new User("Aaron", "Baraiya");
+
+console.log(person);
+console.log(person.greetUser());
+person.editName("BOB -700");
+console.log(person.greetUser());
+console.log(person.middleName());
