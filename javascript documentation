@@ -1376,3 +1376,47 @@ const second = new Sec("first", "second", "third", "fourth");
 second.getMeth();
 second.firstMethod();
 second.getOtherMeth();
+
+
+
+
+
+
+
+//ANOTHER EXAMPLE:
+class One {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greetPerson() {
+        console.log(`Name One: ${this.name} Age: ${this.age}`);
+    }
+}
+
+class Two extends One {
+    constructor(name, age, gender) {
+        super(name, age);
+        this.gender = gender;
+    }
+
+    getGender() {
+        return `Name: ${this.name} Gender: ${this.gender}`;
+    }
+
+    getFromOtherClass() {
+        super.greetPerson();
+    }
+}
+
+const one = new One("Aaron", 17);
+const two = new Two("John", 20, "Male");
+
+/*
+whenever a method is being called using inheritance
+get rid of the console.log();
+*/
+one.greetPerson();
+console.log(two.getGender());
+two.getFromOtherClass();
