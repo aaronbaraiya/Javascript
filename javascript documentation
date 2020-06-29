@@ -1420,3 +1420,126 @@ get rid of the console.log();
 one.greetPerson();
 console.log(two.getGender());
 two.getFromOtherClass();
+
+
+
+
+
+
+
+
+//static methods
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  //static method
+  static staticMethod() {
+    return "I am static";
+  }
+
+  greet() {
+    return `Name: ${this.name} Age: ${this.age}`;
+  }
+}
+
+//calling a static method
+console.log(Animal.staticMethod());
+
+const animal = new Animal("Aaron", 17);
+console.log(animal.greet());
+
+
+
+
+
+//promises
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("data back from the server");
+  }, 7000);
+
+  setTimeout(() => {
+    reject("No data back from the server");
+  }, 2000);
+});
+
+//then works if resolve is true
+promise.then(resposne => {
+  console.log(response);
+}).catch(error => { //catch works if reject is true
+  console.log(error);
+});
+
+
+
+
+
+
+/*
+example without using setTimeout method
+*/ 
+const promise = new Promise((resolve, reject) => {
+  let a = 1 + 2;
+
+  if(a === 2) {
+    resolve("DATA IS TRUE");
+  }
+  else {
+    reject("DATA IS FALSE");
+  }
+});
+
+
+promise.then(response => {
+  console.log(response);
+}).catch(error => {
+  console.log(error);
+});
+
+
+
+
+
+
+/*
+if using setTimeout
+reject timeout has to be
+longer than resolve
+timeout
+*/
+
+const namesPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(["Anna", "Jones", "Ali", "John"]);
+  }, 3000);
+
+  setTimeout(() => {
+    reject("No data back from the server");
+  }, 5000);
+});
+
+const surnamesPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(["One", "Two", "Three", "Four"]);
+  }, 3000);
+
+  setTimeout(() => {
+    reject("No data back from the server");
+  }, 5000);
+});
+
+Promise.all([namesPromise, surnamesPromise]).then(data => {
+  //to print out everything in order do these:
+  const [names, surnames] = data;
+
+  for(let i =0; i < names.length; i++) {
+    const name = names[i];
+    const surName = surnames[i];
+    console.log(`Name: ${name} Surname: ${surName}`);
+  }
+}).catch(error => {
+  console.log(error);
+});
