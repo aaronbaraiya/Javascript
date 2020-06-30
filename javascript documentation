@@ -1566,3 +1566,46 @@ promise.then(response => {
 }).catch(error => {
     console.log(error);
 });
+
+
+
+
+
+
+//generators
+const getValues = function* () {
+    yield 1;
+    yield "hello";
+    yield true;
+    yield {name: "John"};
+    return "Status: Completed";
+}
+
+const numbers = getValues();
+
+console.log(numbers.next().value);
+console.log(numbers.next().value);
+console.log(numbers.next().value);
+console.log(JSON.stringify(numbers.next().value));
+console.log(numbers.next().value);
+
+
+
+
+
+//async and await
+async function name (name) {
+
+    const transformName = new Promise((resolve, reject) => {
+        setTimeout(() => resolve(name.toUpperCase()), 3000);
+        setTimeout(() => reject(name.toLowerCase()), 5000);
+    });
+
+    const result = await transformName;
+
+    return result;
+}
+
+name("Aaron").then(res => {
+    console.log(`Async function: ${res}`);
+});
