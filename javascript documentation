@@ -1543,3 +1543,26 @@ Promise.all([namesPromise, surnamesPromise]).then(data => {
 }).catch(error => {
   console.log(error);
 });
+
+
+
+
+/*
+whichever timeout is shorter is going to 
+be the one that gets logged
+*/
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("DATA SENT");
+    }, 5000);
+
+    setTimeout(() => {
+        reject("DATA NOT SENT");
+    }, 2000);
+});
+
+promise.then(response => {
+    console.log(response);
+}).catch(error => {
+    console.log(error);
+});
